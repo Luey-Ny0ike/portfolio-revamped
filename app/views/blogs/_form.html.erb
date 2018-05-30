@@ -21,14 +21,15 @@
     <%= form.file_field :blog_photo %>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description, id: :blog_description %>
-  </div>
 
   <div class="field">
     <%= form.label :synopsis %>
     <%= form.text_field :synopsis, id: :blog_synopsis %>
+  </div>
+  
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.cktext_area :description, id: :blog_description %>
   </div>
 
   <div class="actions">
