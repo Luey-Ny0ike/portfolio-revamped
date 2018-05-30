@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: "home#index"
+  get '/about', to: 'about#index'
   resources :blogs
   resources :blog_categories
   resources :categories
