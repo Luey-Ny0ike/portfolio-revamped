@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :blog_categories
   resources :categories
   resources :skills
   resources :projects
