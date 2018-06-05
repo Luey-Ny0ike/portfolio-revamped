@@ -19,7 +19,7 @@
         <td><%= project.title %></td>
         <td><%= project.challenge %></td>
         <td><%= project.link %></td>
-        <td><%= image_tag project.cover_photo.url %></td>
+        <td><%= image_tag project.cover_photo.url(:medium) %></td>
         <td><%= project.description %></td>
         <td><%= link_to 'Show', project %></td>
         <td><%= link_to 'Edit', edit_project_path(project) %></td>
