@@ -55,3 +55,4 @@ gem 'jquery-rails'
 gem 'devise'
 gem "paperclip", "~> 6.0.0"
 gem 'ckeditor'
+gem "animate-rails"
