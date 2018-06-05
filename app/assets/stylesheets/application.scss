@@ -26,6 +26,39 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
+// NAVBAR
+
+// FOTTER
+footer{
+  background-color: #004ead;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  .social-links-f{
+    padding: 7px;
+    text-align: center;
+    #s-link{
+      padding-left: 14px;
+      color: #54c5f9;
+    }
+    #s-link:hover{
+      text-decoration: none;
+    }
+  }
+  .social-links-fm{
+    display: none;
+    padding: 7px;
+    text-align: center;
+    #s-link{
+      padding-left: 14px;
+      color: #54c5f9;
+    }
+    #s-link:hover{
+      text-decoration: none;
+    }
+  }
+}
 
 .start {
   /* The image used */
@@ -41,7 +74,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: black;
-
+  position: relative;
+  z-index: 4;
   .mwanzo {
     color: white;
 
@@ -96,6 +130,11 @@ body {
 }
 
 .projects {
+  position: relative;
+  z-index: 4;
+  box-shadow: 0 30px 60px 20px rgba(0,0,0,.2);
+  margin-bottom: 331px;
+  background: #fff;
   #projects-header {
     text-align: center;
     font-family: 'Lora', serif;
@@ -145,16 +184,14 @@ body {
 .bottom-home{
   background: #0088c8 url("stars.png") no-repeat 50%;
   background-blend-mode: overlay;
-  background-attachment: fixed;
-  flex-shrink: 0;
-  min-width: 100%;
-  min-height: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  margin-bottom: 32px;
+  display: block;
   background-size: cover;
   padding: 5em 0;
-  background-position: right;
+  width: 100%;
   text-align: center;
   #bottom-headline{
     font-family: 'Lora', serif;
