@@ -19,6 +19,7 @@
 
 html {
   overflow-y: scroll;
+  line-height: 1.15;
 }
 
 body {
@@ -140,15 +141,6 @@ footer{
     font-family: 'Lora', serif;
   }
 
-  #under-ph {
-    width: 15%;
-    margin-top: 2px;
-    border: 0;
-    height: 1.2px;
-    background: #333;
-    background-image: linear-gradient(to right, silver 20%, black 80%, silver 20%);
-  }
-
   #sub-header {
     font-family: 'Lora', serif;
     font-size: 15px;
@@ -208,36 +200,115 @@ footer{
     color: white;
   }
 }
-
-footer{
-  background-color: #004ead;
-  .social-links-f{
-    padding: 7px;
+// ABOUT ME PAGE
+.introduction{
+  position: relative;
+  z-index: 4;
+  #about-header{
     text-align: center;
-    #s-link{
-      padding-left: 14px;
-      color: #54c5f9;
+    font-family: 'Lora', serif;
+  }
+  .bitmoji{
+    margin-left: 54px;
+    #bitmoji{
+      margin-left: 68px;
     }
-    #s-link:hover{
-      text-decoration: none;
+    #batman-quote{
+      font-family: 'Niconne', cursive;
+      font-size: 13px;
     }
   }
-  .social-links-fm{
-    display: none;
-    padding: 7px;
-    text-align: center;
-    #s-link{
-      padding-left: 14px;
-      color: #54c5f9;
-    }
-    #s-link:hover{
-      text-decoration: none;
+  #about-content{
+    font-family: 'Rokkitt', serif;
+  }
+  ul{
+    display: inline;
+  }
+  li{
+    float: left;
+    font-family: 'Rokkitt', serif;
+    padding-right: 25px;
+  }
+  #videographer{
+    margin-right: 34px;
+  }
+  .services{
+    padding-top: 25px;
+    #service{
+      font-family: 'Lora', serif;
+      text-align: center;
     }
   }
 }
+.skills{
+  position: relative;
+  z-index: 4;
+  margin-bottom: 321px;
+  padding-top: 25px;
+  background: #fff;
+  #skills-header{
+    text-align: center;
+    font-family: 'Lora', serif;
+  }
+  #sub{
+    font-size: 12px;
+    color: grey;
+    font-family: 'Rokkitt', serif;
+  }
+  #skill-name{
+    font-family: 'Lora', serif;
+    padding-top: 5px;
+  }
+  #skill-photo{
 
+  }
+}
+#progress-bar{
+  max-width: 460px;
+}
+.all{
+  background: #fff;
+  position: relative;
+  z-index: 4;
+}
+.bottom-about{
+  background: #0088c8 url("clouds.jpg") no-repeat 50%;
+  background-blend-mode: overlay;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  margin-bottom: 32px;
+  display: block;
+  background-size: cover;
+  padding: 4em 0;
+  width: 100%;
+  text-align: center;
+  #bottom-headline{
+    font-family: 'Lora', serif;
+    color: white;
+    padding-top: 55px;
+  }
+  .work-button{
+    background-color: #36a7db;
+    color: #ced7e5;
+  }
+  .work-button:hover{
+    transition: 0.3s;
+    border-radius: 15px;
+    color: white;
+  }
+}
 // MEDIA QUERIES
 @media only screen and (max-width: 876px) {
+  footer{
+    .social-links-f{
+      display: none;
+    }
+    .social-links-fm{
+      display: block;
+    }
+  }
+// lANDING PAGE QUERIES
   .projects {
     #under-ph {
       width: 40%;
@@ -253,16 +324,24 @@ footer{
       }
     }
   }
-  footer{
-    .social-links-f{
-      display: none;
+
+  // ABOUT ME PAGE QUERIES
+.introduction{
+  .bitmoji{
+    margin-left: 0px;
+    #bitmoji{
+      text-align: center;
+      margin: 0 auto;
     }
-    .social-links-fm{
-      display: block;
+    margin: auto 0;
+    #batman-quote{
+      text-align: center;
     }
   }
 }
+}
 @media only screen and (max-width: 676px){
+  // lANDING PAGE QUERIES
   .projects{
     .card{
       .image-main{
@@ -274,7 +353,17 @@ footer{
     }
   }
 }
+
+// SHARED STYLING
 #link{
   text-decoration: none;
   color: inherit;
+}
+#under-ph{
+  width: 15%;
+  margin-top: 2px;
+  border: 0;
+  height: 1.2px;
+  background: #333;
+  background-image: linear-gradient(to right, silver 20%, black 80%, silver 20%);
 }
