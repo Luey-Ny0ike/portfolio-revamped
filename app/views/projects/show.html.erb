@@ -26,16 +26,16 @@
         <%= @project.description.html_safe %>
       </div>
       <div class="col-md-6 col-sm-6 col-xs-6">
+      <% if @project.prev == nil%>
+      <% else %>
         <p id="next-p">PREVIOUS PROJECT</p>
-        <% if @project.prev == nil%>
-        <% else %>
         <%= link_to project_path(@project.prev.id), id:"linki" do %>
         <h3 id="ntitle"><%= @project.prev.title %></h3>
-        <% end %>
         <% end %>
         <div class="pull-left">
           <span class="glyphicon glyphicon-chevron-left" id="gf"></span>
         </div>
+        <% end %>
       </div>
       <% if @project.next == nil %>
       <% else %>
