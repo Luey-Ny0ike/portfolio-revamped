@@ -1,0 +1,55 @@
+<div class="container-fluid start">
+  <div class="container mwanzo">
+    <h1 class="animated bounce" id="name">Lewis Nyoike</h1>
+    <h2 class="animated fadeInDownBig"id="slogan">I bulid <span id="awesome">awesome</span> things</h2>
+    <h2 class="animated fadeInDown" id="slogan-two">For <span id="awesome">Awesome</span> people</h2>
+    <h3 id="scroll"> Scroll <br><br><img class="animated infinite bounce" id="bt" src="https://png.icons8.com/android/38/000000/expand-arrow.png"></h3>
+  </div>
+</div>
+<div class="container-fluid projects">
+  <h2 id="projects-header">My projects</h2>
+  <hr id="under-ph">
+  <div class="container">
+    <h3 id="sub-header"><%= @web_design.name %></h3><br>
+    <div class="row">
+      <% @web_designs.each do |project| %>
+      <div class="col-md-4 col-sm-6 col-xs-6 card">
+        <div class="image-main">
+          <%= link_to project_path(project), id:"link" do %>
+          <%= image_tag project.cover_photo.url(:large), class:"img-responsive", id:"image-boki"%>
+          <% end %>
+        </div>
+        <div class="container content">
+          <%= link_to project_path(project), id:"link" do %>
+          <h4 id="project-title"><%= project.title %></h4>
+          <% end %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <br>
+    <h3 id="sub-header"><%= @videography.name %></h3><br>
+    <div class="row">
+      <% @video_projects.each do |project| %>
+      <div class="col-md-4 col-sm-6 col-xs-6 card">
+        <div class="image-main">
+          <%= link_to project_path(project), id:"link" do %>
+          <%= image_tag project.cover_photo.url(:large), class:"img-responsive", id:"image-boki"%>
+          <% end %>
+        </div>
+        <div class="container content">
+          <%= link_to project_path(project), id:"link" do %>
+          <h4 id="project-title"><%= project.title %></h4>
+          <% end %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="container-fluid bottom-home">
+  <h1 id="bottom-headline">Who is this guy?</h1>
+  <%= link_to about_path, id:"link" do %>
+  <button type="button" name="button" class="btn find-out-button">Let's find out</button>
+  <% end %>
+</div>
