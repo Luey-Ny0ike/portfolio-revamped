@@ -5,6 +5,12 @@ class ProjectsController < ApplicationController
   # GET /projects.json
   def index
     @projects = Project.all
+    @webdesign = Category.find_by(name: "Web design")
+    @videography = Category.find_by(name: "Videography")
+    @infographics = Category.find_by(name: "Infographics")
+    @web_design_projects = @projects.where(category_id: @webdesign.id)
+    @videography_projects = @projects.where(category_id: @videography.id)
+    @infographics_projects = @projects.where(category_id: @infographics.id)
   end
 
   # GET /projects/1
