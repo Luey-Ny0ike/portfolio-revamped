@@ -1,24 +1,24 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @project.title %>
-</p>
-
-<p>
-  <strong>Challenge:</strong>
-  <%= @project.challenge %>
-</p>
-
-<p>
-  <strong>Link:</strong>
-  <%= @project.link %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @project.description %>
-</p>
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<div class="container-fluid project-show" style="background:#0088c8 url('<%= @project.cover_photo.url(:background)%>') no-repeat 50%">
+  <h1 id="project-slogan"><%= @project.slogan %></h1>
+  <h4 id="project-header"><%= @project.title %></h4>
+</div>
+<div class="container-fluid rest">
+  <div class="container row top-part">
+    <div class="col-md-4 col-md-push-2 col-sm-4 col-sm-push-2 col-xs-12">
+      <p id="project-h">- PROJECT TYPE</p>
+      <h4 id="pt"><%= @project.category.name %></h4>
+    </div>
+    <div class="col-md-4 col-md-push-2 col-sm-4 col-sm-push-2 col-xs-12">
+      <p id="project-h">- THE CHALLENGE</p>
+      <h4 id="pt"><%= @project.challenge %></h4>
+    </div>
+    <div class="col-md-4 col-md-push-4 col-sm-4 col-sm-push-4 col-xs-12">
+      <p id="project-h">- IN THE WILD</p>
+      <% if @project.link == nil%>
+      <a href="<%= @project.link%>" target="_blank" class="btn project-link-button">View it online &nbsp; <span id="anim">></span></a>
+      <% else %>
+      <button type="button" name="button" class="btn no-link-button" disabled>In development</button>
+      <% end %>
+    </div>
+  </div>
+</div>
