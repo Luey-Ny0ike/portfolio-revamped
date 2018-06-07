@@ -21,6 +21,25 @@
     <%= collection_select(:skill, :category_id, Category.all, :id, :name_with_state) %>
   </div>
 
+  <div class="field">
+    <%= form.label :progress %>
+    <%= form.text_field :progress, id: :skill_progress %>
+  </div>
+
+  <div class="field">
+    <%= form.label :color %>
+    <%= form.select :color, options_for_select(['success', 'primary', 'danger', 'warning', 'info'])%>
+  </div>
+
+<div class="field">
+  <%= form.label "Avatar(editorial skills only)" %>
+  <%= form.file_field :avatar %>
+</div>
+
+<div class="field">
+  <%= form.label :rating %>
+  <%= form.text_field :rating, id: :skill_rating %>
+</div>
   <div class="actions">
     <%= form.submit %>
   </div>
