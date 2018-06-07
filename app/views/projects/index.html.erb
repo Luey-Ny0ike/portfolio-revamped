@@ -1,34 +1,123 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid projects-introduction">
+  <h1 id="projects-header">My projects</h1>
+  <hr id="under-ph">
 
-<h1>Projects</h1>
+  <div class="container">
+    <div class="container quote">
+      <h4 id="big-quote">"Imagination is more important than knowledge.
+      For knowledge is limited, whereas imagination embraces the entire world, stimulating progress, giving birth to evolution."</h4>
+      <span id="AE">~ Albert Einstein</span>
+    </div>
+    <div class="container my-projects">
+      <ul class="nav nav-pills nav-justified">
+      <li class="active">
+        <a data-toggle="pill" href="#all"><span id="incase" class="pill-size">All <%= @projects.count %></span></a>
+      </li>
+      <li>
+        <a data-toggle="pill" href="#web-design"><span id="incase" class="pill-size">Web design</span></a>
+      </li>
+      <li>
+          <a data-toggle="pill" href="#videography"><span id="incase" class="pill-size">Videography</span></a>
+      </li>
+      <li>
+          <a data-toggle="pill" href="#infographics"><span id="incase" class="pill-size">Infographics</span></a>
+      </li>
+    </ul>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Challenge</th>
-      <th>Link</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.title %></td>
-        <td><%= project.challenge %></td>
-        <td><%= project.link %></td>
-        <td><%= image_tag project.cover_photo.url(:medium) %></td>
-        <td><%= project.description %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Project', new_project_path %>
+    <div class="container tab-content">
+     <div id="all" class="tab-pane fade in active">
+       <div class="row">
+         <% @projects.each do |project| %>
+         <div class="col-md-4 col-sm-6 col-xs-6 card">
+           <div class="image-main">
+             <%= link_to project_path(project), id:"link" do %>
+             <%= image_tag project.cover_photo.url(:large), class:"img-responsive", id:"image-boki"%>
+             <% end %>
+           </div>
+           <div class="container content">
+             <%= link_to project_path(project), id:"link" do %>
+             <h4 id="project-title"><%= project.title %></h4>
+            <span id="project-category"><%= project.category.name %></span>
+             <% end %>
+           </div>
+         </div>
+         <% end %>
+       </div>
+     </div>
+     <div id="web-design" class="tab-pane fade">
+       <% if @web_design_projects.any? %>
+       <div class="row">
+         <% @web_design_projects.each do |project| %>
+         <div class="col-md-4 col-sm-6 col-xs-6 card">
+           <div class="image-main">
+             <%= link_to project_path(project), id:"link" do %>
+             <%= image_tag project.cover_photo.url(:large), class:"img-responsive", id:"image-boki"%>
+             <% end %>
+           </div>
+           <div class="container content">
+             <%= link_to project_path(project), id:"link" do %>
+             <h4 id="project-title"><%= project.title %></h4>
+            <span id="project-category"><%= project.category.name %></span>
+             <% end %>
+           </div>
+         </div>
+         <% end %>
+       </div>
+       <% else %>
+       <h4 id="incase"><%= @webdesign.name %> projects coming soon.</h4>
+       <% end %>
+     </div>
+     <div id="videography" class="tab-pane fade">
+       <% if @videography_projects.any? %>
+       <div class="row">
+         <% @videography_projects.each do |project| %>
+         <div class="col-md-4 col-sm-6 col-xs-6 card">
+           <div class="image-main">
+             <%= link_to project_path(project), id:"link" do %>
+             <%= image_tag project.cover_photo.url(:large), class:"img-responsive", id:"image-boki"%>
+             <% end %>
+           </div>
+           <div class="container content">
+             <%= link_to project_path(project), id:"link" do %>
+             <h4 id="project-title"><%= project.title %></h4>
+            <span id="project-category"><%= project.category.name %></span>
+             <% end %>
+           </div>
+         </div>
+         <% end %>
+       </div>
+       <% else %>
+       <h4 id="incase"><%= @videography.name %> projects coming soon.</h4>
+       <% end %>
+     </div>
+     <div id="infographics" class="tab-pane fade">
+       <% if @infographics_projects.any? %>
+       <div class="row">
+         <% @infographics_projects.each do |project| %>
+         <div class="col-md-4 col-sm-6 col-xs-6 card">
+           <div class="image-main">
+             <%= link_to project_path(project), id:"link" do %>
+             <%= image_tag project.cover_photo.url(:large), class:"img-responsive", id:"image-boki"%>
+             <% end %>
+           </div>
+           <div class="container content">
+             <%= link_to project_path(project), id:"link" do %>
+             <h4 id="project-title"><%= project.title %></h4>
+            <span id="project-category"><%= project.category.name %></span>
+             <% end %>
+           </div>
+         </div>
+         <% end %>
+       </div>
+       <% else %>
+       <h4 id="incase"><%= @infographics.name %> projects coming soon.</h4>
+       <% end %>
+     </div>
+   </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid bottom-projects">
+  <h2 id="bottom-headline">Like what you see? <br>Let's build something together</h2>
+  <button type="button" name="button" class="btn bottom-projects-button">Contact me</button>
+</div>
