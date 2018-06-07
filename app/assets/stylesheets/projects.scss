@@ -69,3 +69,48 @@
     color: white;
   }
 }
+// THE SHOW PART
+.project-show{
+  background-blend-mode: overlay;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  padding: 12em 0;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-family: 'Lora', serif;
+}
+.rest{
+  padding-top: 25px;
+  .top-part{
+    width: 80%;
+  #project-h{
+    font-size: 11px;
+    color: grey;
+    font-family: 'Lora', serif;
+  }
+  #pt{
+    font-family: 'Rokkitt', serif;
+  }
+  .project-link-button{
+    background-color: #0059b2;
+    color: white;
+    font-family: 'Rokkitt', serif;
+  }
+  .project-link-button:hover{
+    border-radius: 10px;
+    #anim{
+      width: 25px;
+      transition: 1s;
+    }
+  }
+    .no-link-button{
+      font-family: 'Rokkitt', serif;
+      background-color: #d5dae5;;
+      color: #fff;
+      padding: 8px;
+    }
+    }
+}
