@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Skills</h1>
+
+  <% @skills.each do |skill| %>
+  <%= link_to skill_path(skill), id:"link" do %>
+    <%= skill.name %> <%= progress_bar skill.progress.to_f, alternative: skill.color, label: true, id:'progress-bar' %>
+    <% end %>
+  <% end %>
+
+  <br>
+
+  <%= link_to 'New Skill', new_skill_path %>
+
+</div>

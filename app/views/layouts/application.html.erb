@@ -3,12 +3,31 @@
   <head>
     <title>RevampedPortfolio</title>
     <%= csrf_meta_tags %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=0.7">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <%= yield %>
+    <footer>
+      <div class="container social-links-f">
+        <a id="s-link" href="https://www.linkedin.com/in/lewis-nyoike-a2285b148/" target="_blank">Linkedin</a>&nbsp;&nbsp;
+        <a id="s-link" href="https://www.instagram.com/_nyoike_/" target="_blank">Instagram</a>&nbsp;&nbsp;
+        <a id="s-link" href="#">Youtube</a>
+      </div>
+      <div class="container social-links-fm">
+        <a id="s-link" href="https://www.linkedin.com/in/lewis-nyoike-a2285b148/" target="_blank">
+          <img src="https://png.icons8.com/ios/28/54c5f9/linkedin-2-filled.png">
+        </a>&nbsp;&nbsp;
+        <a id="s-link" href="https://www.instagram.com/_nyoike_/" target="_blank">
+          <img src="https://png.icons8.com/ios/28/54c5f9/instagram-new.png">
+        </a>&nbsp;&nbsp;
+        <a id="s-link" href="#">
+          <img src="https://png.icons8.com/ios/30/54c5f9/youtube-filled.png">
+        </a>
+      </div>
+    </footer>
+<link href="https://fonts.googleapis.com/css?family=Bangers|Bungee+Shade|Lora|Rokkitt|Niconne" rel="stylesheet">
   </body>
 </html>

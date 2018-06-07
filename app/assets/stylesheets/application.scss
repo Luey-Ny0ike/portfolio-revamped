@@ -1,0 +1,383 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require animate
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap"; // THE LANDING PAGE
+
+html {
+  overflow-y: scroll;
+  line-height: 1.15;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+// NAVBAR
+
+// FOTTER
+footer{
+  background-color: #004ead;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  .social-links-f{
+    padding: 7px;
+    text-align: center;
+    #s-link{
+      padding-left: 14px;
+      color: #54c5f9;
+    }
+    #s-link:hover{
+      text-decoration: none;
+    }
+  }
+  .social-links-fm{
+    display: none;
+    padding: 7px;
+    text-align: center;
+    #s-link{
+      padding-left: 14px;
+      color: #54c5f9;
+    }
+    #s-link:hover{
+      text-decoration: none;
+    }
+  }
+}
+
+.start {
+  /* The image used */
+  background-image: linear-gradient(rgba(88, 150, 243, 0.67),rgba(88, 150, 243, 0.67)), url("lewisb.jpg");
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  padding-top: 50px;
+  padding-bottom: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+  position: relative;
+  z-index: 4;
+  .mwanzo {
+    color: white;
+
+    #name {
+      -webkit-animation-duration: 1s;
+      -moz-animation-duration: 1s;
+      -o-animation-duration: 1s;
+      font-family: 'Bungee Shade', cursive;
+      text-shadow: 0 0 3px white, -1px -1px white, 1px 1px #000;
+      font-size: 60px;
+    }
+
+    #slogan {
+      -webkit-animation-duration: 1.5s;
+      -moz-animation-duration: 1.5s;
+      -o-animation-duration: 1.5s;
+      font-family: 'Bangers', cursive;
+      text-shadow: 0 0 3px #000, -1px -1px #000, 1px 1px #000;
+    }
+
+    #slogan-two {
+      -webkit-animation-duration: 2s;
+      -moz-animation-duration: 2s;
+      -o-animation-duration: 2s;
+      -webkit-animation-delay: 2s;
+      -moz-animation-delay: 2s;
+      -o-animation-delay: 2s;
+      font-family: 'Bangers', cursive;
+      text-shadow: 0 0 3px #000, -1px -1px #000, 1px 1px #000;
+      padding-left: 14px;
+    }
+
+    #awesome {
+      font-size: 37px;
+    }
+
+    #scroll {
+      font-family: 'Bangers', cursive;
+      text-align: center;
+      padding-top: 350px;
+
+      #bt {
+        -webkit-animation-duration: 1.5s;
+        -moz-animation-duration: 1.5s;
+        -o-animation-duration: 1.5s;
+        -webkit-animation-delay: 4s;
+        -moz-animation-delay: 4s;
+        -o-animation-delay: 4s;
+      }
+    }
+  }
+}
+
+.projects {
+  position: relative;
+  z-index: 4;
+  box-shadow: 0 30px 60px 20px rgba(0,0,0,.2);
+  margin-bottom: 331px;
+  background: #fff;
+  #projects-header {
+    text-align: center;
+    font-family: 'Lora', serif;
+  }
+
+  #sub-header {
+    font-family: 'Lora', serif;
+    font-size: 15px;
+    color: grey;
+  }
+
+}
+.card {
+  border: 1px solid transparent;
+  padding: 2px;
+  background: white;
+  margin-bottom: 5px;
+  .image-main {
+    padding-left: 0;
+    padding-right: 0;
+    height: 308px;
+  }
+
+  .content {
+    padding-top: 4px;
+    height: auto;
+
+    #project-title {
+      font-family: 'Lora', serif;
+      margin-bottom: 2px;
+    }
+    #project-category{
+      color: grey;
+      font-size: 12px;
+      font-family: 'Rokkitt', serif;
+    }
+  }
+
+  #image-boki {
+    height: 306px;
+    width: 100%;
+  }
+}
+.bottom-home{
+  background: #0088c8 url("stars.png") no-repeat 50%;
+  background-blend-mode: overlay;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  margin-bottom: 32px;
+  display: block;
+  background-size: cover;
+  padding: 5em 0;
+  width: 100%;
+  text-align: center;
+  #bottom-headline{
+    font-family: 'Lora', serif;
+    color: white;
+    padding-top: 55px;
+  }
+  .find-out-button{
+    background-color: #36a7db;
+    color: #ced7e5;
+  }
+  .find-out-button:hover{
+    transition: 0.3s;
+    border-radius: 20px;
+    color: white;
+  }
+}
+// ABOUT ME PAGE
+.introduction{
+  position: relative;
+  z-index: 4;
+  background: #fff;
+  #about-header{
+    text-align: center;
+    font-family: 'Lora', serif;
+  }
+  .bitmoji{
+    margin-left: 54px;
+    #bitmoji{
+      margin-left: 68px;
+    }
+    #batman-quote{
+      font-family: 'Niconne', cursive;
+      font-size: 13px;
+    }
+  }
+  #about-content{
+    font-family: 'Rokkitt', serif;
+  }
+  ul{
+    display: inline;
+  }
+  li{
+    float: left;
+    font-family: 'Rokkitt', serif;
+    padding-right: 25px;
+  }
+  #videographer{
+    margin-right: 34px;
+  }
+  .services{
+    padding-top: 25px;
+    #service{
+      font-family: 'Lora', serif;
+      text-align: center;
+    }
+  }
+}
+.skills{
+  position: relative;
+  z-index: 4;
+  margin-bottom: 321px;
+  padding-top: 25px;
+  background: #fff;
+  #skills-header{
+    text-align: center;
+    font-family: 'Lora', serif;
+  }
+  #sub{
+    font-size: 12px;
+    color: grey;
+    font-family: 'Rokkitt', serif;
+  }
+  #skill-name{
+    font-family: 'Lora', serif;
+    padding-top: 5px;
+  }
+  #skill-photo{
+
+  }
+}
+#progress-bar{
+  max-width: 460px;
+}
+.all{
+  background: #fff;
+  position: relative;
+  z-index: 4;
+}
+.bottom-about{
+  background: #0088c8 url("clouds.jpg") no-repeat 50%;
+  background-blend-mode: overlay;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  margin-bottom: 32px;
+  display: block;
+  background-size: cover;
+  padding: 4em 0;
+  width: 100%;
+  text-align: center;
+  #bottom-headline{
+    font-family: 'Lora', serif;
+    color: white;
+    padding-top: 55px;
+  }
+  .work-button{
+    background-color: #36a7db;
+    color: #ced7e5;
+  }
+  .work-button:hover{
+    transition: 0.3s;
+    border-radius: 15px;
+    color: white;
+  }
+}
+// MEDIA QUERIES
+@media only screen and (max-width: 876px) {
+  footer{
+    .social-links-f{
+      display: none;
+    }
+    .social-links-fm{
+      display: block;
+    }
+  }
+// lANDING PAGE QUERIES
+  .projects {
+    #under-ph {
+      width: 40%;
+    }
+
+  }
+  .card {
+    padding: 0;
+    .image-main{
+      height: 256px;
+    }
+    #image-boki{
+      height: 254px;
+    }
+  }
+
+  // ABOUT ME PAGE QUERIES
+.introduction{
+  .bitmoji{
+    margin-left: 0px;
+    #bitmoji{
+      text-align: center;
+      margin: 0 auto;
+    }
+    margin: auto 0;
+    #batman-quote{
+      text-align: center;
+    }
+  }
+}
+
+// PROJECTS PAGE QUERIES
+.projects-introduction{
+  .quote{
+    width: 90%;
+  }
+}
+}
+@media only screen and (max-width: 676px){
+  // lANDING PAGE QUERIES
+  .projects{
+    .card{
+      .image-main{
+        height: 216px;
+      }
+      #image-boki{
+        height: 214px;
+      }
+    }
+  }
+}
+
+// SHARED STYLING
+#link{
+  text-decoration: none;
+  color: inherit;
+}
+#under-ph{
+  width: 15%;
+  margin-top: 2px;
+  border: 0;
+  height: 1.2px;
+  background: #333;
+  background-image: linear-gradient(to right, silver 20%, black 80%, silver 20%);
+}

@@ -1,0 +1,173 @@
+// Place all the styles related to the projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.projects-introduction{
+  position: relative;
+  z-index: 4;
+  margin-bottom: 331px;
+  background: #fff;
+  #projects-header{
+    text-align: center;
+    font-family: 'Lora', serif;
+  }
+  .quote{
+    width: 60%;
+    #big-quote{
+      font-family: 'Rokkitt', serif;
+      margin-bottom: 0px;
+    }
+    #AE{
+      margin-top: 3px;
+      font-size: 13px;
+      font-family: 'Niconne', cursive;
+      color: grey;
+    }
+  }
+  .my-projects{
+    padding-top: 40px;
+  }
+}
+#incase{
+  color: black;
+  font-family: 'Lora', serif;
+}
+#incase:hover{
+  text-decoration: none;
+  color: black;
+}
+.tab-pane{
+  margin-top: 22px;
+}
+.nav li {
+    display:table-cell !important;
+}
+.bottom-projects{
+  background: #0088c8 url("nature.jpg") no-repeat 50%;
+  background-blend-mode: overlay;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  margin-bottom: 32px;
+  display: block;
+  background-size: cover;
+  padding: 4em 0;
+  width: 100%;
+  text-align: center;
+  #bottom-headline{
+    font-family: 'Lora', serif;
+    color: white;
+    padding-top: 55px;
+  }
+  .bottom-projects-button{
+    background-color: #36a7db;
+    color: #ced7e5;
+  }
+  .bottom-projects-button:hover{
+    transition: 0.3s;
+    border-radius: 15px;
+    color: white;
+  }
+}
+// THE SHOW PART
+.project-show{
+  background-blend-mode: overlay;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  padding: 12em 0;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-family: 'Lora', serif;
+}
+.rest{
+  padding-top: 25px;
+  position: relative;
+  z-index: 4;
+  box-shadow: 0 30px 60px 20px rgba(0,0,0,.2);
+  margin-bottom: 331px;
+  background: #fff;
+  .top-part{
+    width: 80%;
+  #project-h{
+    font-size: 11px;
+    color: grey;
+    font-family: 'Lora', serif;
+  }
+  #pt{
+    font-family: 'Rokkitt', serif;
+  }
+  .project-link-button{
+    background-color: #0059b2;
+    color: white;
+    font-family: 'Rokkitt', serif;
+  }
+  .project-link-button:hover{
+    border-radius: 10px;
+    #anim{
+      width: 25px;
+      transition: 1s;
+    }
+  }
+    .no-link-button{
+      font-family: 'Rokkitt', serif;
+      background-color: #d5dae5;;
+      color: #fff;
+      padding: 8px;
+    }
+    }
+    #next-p{
+      padding-top: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: grey;
+      font-family: 'Rokkitt', serif;
+    }
+    #gf{
+      transform: translateY(-160%);
+      font-size: 2rem;
+    }
+    #linki{
+      color: grey;
+      #ntitle{
+        text-align: center;
+        font-family: 'Lora', serif;
+      }
+    }
+    #linki:hover{
+      text-decoration: none;
+      color: #36a7db;
+      #gf{
+  
+      }
+    }
+}
+.project-show-bottom{
+  background: #0088c8 url("stars.png") no-repeat 50%;
+  background-blend-mode: overlay;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  margin-bottom: 32px;
+  display: block;
+  background-size: cover;
+  padding: 5em 0;
+  width: 100%;
+  text-align: center;
+  #bottom-headline{
+    font-family: 'Lora', serif;
+    color: white;
+    padding-top: 55px;
+  }
+  .back-bottom-button{
+    background-color: #36a7db;
+    color: #ced7e5;
+  }
+  .back-bottom-button:hover{
+    transition: 0.3s;
+    border-radius: 20px;
+    color: white;
+  }
+}

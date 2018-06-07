@@ -1,0 +1,46 @@
+<%= form_with(model: skill, local: true) do |form| %>
+  <% if skill.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(skill.errors.count, "error") %> prohibited this skill from being saved:</h2>
+
+      <ul>
+      <% skill.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :skill_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category %>
+    <%= collection_select(:skill, :category_id, Category.all, :id, :name_with_state) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :progress %>
+    <%= form.text_field :progress, id: :skill_progress %>
+  </div>
+
+  <div class="field">
+    <%= form.label :color %>
+    <%= form.select :color, options_for_select(['success', 'primary', 'danger', 'warning', 'info'])%>
+  </div>
+
+<div class="field">
+  <%= form.label "Avatar(editorial skills only)" %>
+  <%= form.file_field :avatar %>
+</div>
+
+<div class="field">
+  <%= form.label :rating %>
+  <%= form.text_field :rating, id: :skill_rating %>
+</div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
