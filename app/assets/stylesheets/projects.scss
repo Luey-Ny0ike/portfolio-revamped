@@ -84,6 +84,11 @@
 }
 .rest{
   padding-top: 25px;
+  position: relative;
+  z-index: 4;
+  box-shadow: 0 30px 60px 20px rgba(0,0,0,.2);
+  margin-bottom: 331px;
+  background: #fff;
   .top-part{
     width: 80%;
   #project-h{
@@ -113,4 +118,56 @@
       padding: 8px;
     }
     }
+    #next-p{
+      padding-top: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: grey;
+      font-family: 'Rokkitt', serif;
+    }
+    #gf{
+      transform: translateY(-160%);
+      font-size: 2rem;
+    }
+    #linki{
+      color: grey;
+      #ntitle{
+        text-align: center;
+        font-family: 'Lora', serif;
+      }
+    }
+    #linki:hover{
+      text-decoration: none;
+      color: #36a7db;
+      #gf{
+  
+      }
+    }
+}
+.project-show-bottom{
+  background: #0088c8 url("stars.png") no-repeat 50%;
+  background-blend-mode: overlay;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  margin-bottom: 32px;
+  display: block;
+  background-size: cover;
+  padding: 5em 0;
+  width: 100%;
+  text-align: center;
+  #bottom-headline{
+    font-family: 'Lora', serif;
+    color: white;
+    padding-top: 55px;
+  }
+  .back-bottom-button{
+    background-color: #36a7db;
+    color: #ced7e5;
+  }
+  .back-bottom-button:hover{
+    transition: 0.3s;
+    border-radius: 20px;
+    color: white;
+  }
 }
