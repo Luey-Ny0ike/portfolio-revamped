@@ -147,30 +147,36 @@ footer{
     color: grey;
   }
 
-  .card {
-    border: 1px solid transparent;
-    padding: 2px;
-    background: white;
-    margin-bottom: 5px;
-    .image-main {
-      padding-left: 0;
-      padding-right: 0;
-      height: 308px;
-    }
+}
+.card {
+  border: 1px solid transparent;
+  padding: 2px;
+  background: white;
+  margin-bottom: 5px;
+  .image-main {
+    padding-left: 0;
+    padding-right: 0;
+    height: 308px;
+  }
 
-    .content {
-      padding-top: 4px;
-      height: auto;
+  .content {
+    padding-top: 4px;
+    height: auto;
 
-      #project-title {
-        font-family: 'Lora', serif;
-      }
+    #project-title {
+      font-family: 'Lora', serif;
+      margin-bottom: 2px;
     }
+    #project-category{
+      color: grey;
+      font-size: 12px;
+      font-family: 'Rokkitt', serif;
+    }
+  }
 
-    #image-boki {
-      height: 306px;
-      width: 100%;
-    }
+  #image-boki {
+    height: 306px;
+    width: 100%;
   }
 }
 .bottom-home{
@@ -204,6 +210,7 @@ footer{
 .introduction{
   position: relative;
   z-index: 4;
+  background: #fff;
   #about-header{
     text-align: center;
     font-family: 'Lora', serif;
@@ -314,14 +321,14 @@ footer{
       width: 40%;
     }
 
-    .card {
-      padding: 0;
-      .image-main{
-        height: 256px;
-      }
-      #image-boki{
-        height: 254px;
-      }
+  }
+  .card {
+    padding: 0;
+    .image-main{
+      height: 256px;
+    }
+    #image-boki{
+      height: 254px;
     }
   }
 
@@ -337,6 +344,13 @@ footer{
     #batman-quote{
       text-align: center;
     }
+  }
+}
+
+// PROJECTS PAGE QUERIES
+.projects-introduction{
+  .quote{
+    width: 90%;
   }
 }
 }
