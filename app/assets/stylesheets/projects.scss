@@ -1,3 +1,71 @@
 // Place all the styles related to the projects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.projects-introduction{
+  position: relative;
+  z-index: 4;
+  margin-bottom: 331px;
+  background: #fff;
+  #projects-header{
+    text-align: center;
+    font-family: 'Lora', serif;
+  }
+  .quote{
+    width: 60%;
+    #big-quote{
+      font-family: 'Rokkitt', serif;
+      margin-bottom: 0px;
+    }
+    #AE{
+      margin-top: 3px;
+      font-size: 13px;
+      font-family: 'Niconne', cursive;
+      color: grey;
+    }
+  }
+  .my-projects{
+    padding-top: 40px;
+  }
+}
+#incase{
+  color: black;
+  font-family: 'Lora', serif;
+}
+#incase:hover{
+  text-decoration: none;
+  color: black;
+}
+.tab-pane{
+  margin-top: 22px;
+}
+.nav li {
+    display:table-cell !important;
+}
+.bottom-projects{
+  background: #0088c8 url("nature.jpg") no-repeat 50%;
+  background-blend-mode: overlay;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  margin-bottom: 32px;
+  display: block;
+  background-size: cover;
+  padding: 4em 0;
+  width: 100%;
+  text-align: center;
+  #bottom-headline{
+    font-family: 'Lora', serif;
+    color: white;
+    padding-top: 55px;
+  }
+  .bottom-projects-button{
+    background-color: #36a7db;
+    color: #ced7e5;
+  }
+  .bottom-projects-button:hover{
+    transition: 0.3s;
+    border-radius: 15px;
+    color: white;
+  }
+}
