@@ -15,10 +15,43 @@
     <div class="col-md-4 col-md-push-4 col-sm-4 col-sm-push-4 col-xs-12">
       <p id="project-h">- IN THE WILD</p>
       <% if @project.link == nil%>
-      <a href="<%= @project.link%>" target="_blank" class="btn project-link-button">View it online &nbsp; <span id="anim">></span></a>
-      <% else %>
       <button type="button" name="button" class="btn no-link-button" disabled>In development</button>
+      <% else %>
+      <a href="<%= @project.link%>" target="_blank" class="btn project-link-button">View it online &nbsp; <span id="anim">></span></a>
       <% end %>
     </div>
   </div>
+    <div class="container-fluid"><br><br>
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <%= @project.description.html_safe %>
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-6">
+        <p id="next-p">PREVIOUS PROJECT</p>
+        <% if @project.prev == nil%>
+        <% else %>
+        <%= link_to project_path(@project.prev.id), id:"linki" do %>
+        <h3 id="ntitle"><%= @project.prev.title %></h3>
+        <% end %>
+        <% end %>
+        <div class="pull-left">
+          <span class="glyphicon glyphicon-chevron-left" id="gf"></span>
+        </div>
+      </div>
+      <% if @project.next == nil %>
+      <% else %>
+      <div class="col-md-6 col-sm-6 col-xs-6">
+        <p id="next-p">NEXT PROJECT</p>
+        <%= link_to project_path(@project.next.id), id:"linki" do %>
+        <h3 id="ntitle"><%= @project.next.title%></h3>
+        <% end %>
+        <div class="pull-right">
+          <span class="glyphicon glyphicon-chevron-right" id="gf"></span>
+        </div>
+      </div>
+      <% end %>
+    </div>
+</div>
+<div class="project-show-bottom">
+  <h1 id="bottom-headline">Thanks for watching</h1>
+  <%= link_to "LET'S GO BACK", projects_path, class:"btn back-bottom-button"%>
 </div>
