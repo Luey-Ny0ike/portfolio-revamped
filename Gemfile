@@ -54,6 +54,7 @@ gem 'bootstrap-sass', '~> 3.3.7'
 gem 'jquery-rails'
 gem 'devise'
 gem "paperclip", "~> 6.0.0"
+gem 'aws-sdk', '~> 2.3'
 gem 'ckeditor'
 gem "animate-rails"
 gem 'bootstrap_progressbar'
