@@ -58,3 +58,4 @@ gem 'aws-sdk', '~> 2.3'
 gem 'ckeditor'
 gem "animate-rails"
 gem 'bootstrap_progressbar'
+gem "font-awesome-rails"
