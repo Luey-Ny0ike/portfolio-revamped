@@ -9,6 +9,30 @@
   </head>
 
   <body>
+    <!-- The preloader -->
+<!-- <div class="preloader">
+  <div class="body">
+    <span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <div class="base">
+      <span></span>
+      <div class="face"></div>
+    </div>
+  </div>
+  <div class="longfazers">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <h1 class="preloader-heading">Redirecting</h1>
+		<div class="loader-section section-left"></div>
+		<div class="loader-section section-right"></div>
+</div> -->
 
     <div class="container-nav">
       <div class="mask"></div>
@@ -43,26 +67,14 @@
     </div>
   </div>
 
-    <!-- <div class="body">
-      <span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </span>
-      <div class="base">
-        <span></span>
-        <div class="face"></div>
-      </div>
-    </div>
-    <div class="longfazers">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <h1 class="preloader-heading">Redirecting</h1> -->
-
+  <% unless flash.empty? %>
+       <script type="text/javascript">
+            <% flash.each do |f| %>
+          <% type = f[0].to_s.gsub('alert', 'error').gsub('notice', 'info') %>
+           toastr['<%= type %>']('<%= f[1] %>');
+       <% end %>
+       </script>
+  <% end %>
       <%= yield %>
 
           <footer>
@@ -83,8 +95,7 @@
               </a>
             </div>
           </footer>
-      <link href="https://fonts.googleapis.com/css?family=Bangers|Bungee+Shade|Lora|Rokkitt|Niconne" rel="stylesheet">
-
+      <link href="https://fonts.googleapis.com/css?family=Bangers|Bungee+Shade|Lora|Rokkitt|Niconne|Montserrat|Roboto" rel="stylesheet">
 
   </body>
 
