@@ -71,12 +71,14 @@
 }
 // THE SHOW PART
 .project-show{
+  flex-shrink: 0;
   background-blend-mode: overlay;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  padding: 12em 0;
+  z-index: 4;
+  padding: 10em 0;
   color: white;
   width: 100%;
   text-align: center;
@@ -140,7 +142,7 @@
       text-decoration: none;
       color: #36a7db;
       #gf{
-  
+
       }
     }
 }
