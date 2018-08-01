@@ -59,3 +59,7 @@ gem 'ckeditor'
 gem "animate-rails"
 gem 'bootstrap_progressbar'
 gem "font-awesome-rails"
+gem 'toastr-rails'
+gem 'remotipart', github: 'mshibuya/remotipart'
+gem 'rails_admin', '>= 1.0.0.rc'
+gem 'cancancan'
