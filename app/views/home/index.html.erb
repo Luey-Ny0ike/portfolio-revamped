@@ -12,7 +12,8 @@
   <div class="container">
     <h3 id="sub-header"><%= @web_design.name %></h3><br>
     <div class="row">
-      <% @web_designs.each do |project| %>
+      <% @web_designso = @web_designs.first(6).sort {|a, b| b[:created_at] <=> a[:created_at]} %>
+      <% @web_designso.each do |project| %>
       <div class="col-md-4 col-sm-6 col-xs-6 card">
         <div class="image-main">
           <%= link_to project_path(project), id:"link" do %>
@@ -30,7 +31,8 @@
     <br>
     <h3 id="sub-header"><%= @videography.name %></h3><br>
     <div class="row">
-      <% @video_projects.each do |project| %>
+      <% @video_projectso = @video_projects.first(3).sort {|a, b| b[:created_at] <=> a[:created_at]} %>
+      <% @video_projectso.each do |project| %>
       <div class="col-md-4 col-sm-6 col-xs-6 card">
         <div class="image-main">
           <%= link_to project_path(project), id:"link" do %>

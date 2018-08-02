@@ -27,7 +27,7 @@
     <div class="container tab-content">
      <div id="all" class="tab-pane fade in active">
        <div class="row">
-         <% @projects.each do |project| %>
+         <% @projects.sort {|a, b| b[:created_at] <=> a[:created_at]}.each do |project| %>
          <div class="col-md-4 col-sm-6 col-xs-6 card">
            <div class="image-main">
              <%= link_to project_path(project), id:"link" do %>
@@ -47,7 +47,7 @@
      <div id="web-design" class="tab-pane fade">
        <% if @web_design_projects.any? %>
        <div class="row">
-         <% @web_design_projects.each do |project| %>
+         <% @web_design_projects.sort {|a, b| b[:created_at] <=> a[:created_at]}.each do |project| %>
          <div class="col-md-4 col-sm-6 col-xs-6 card">
            <div class="image-main">
              <%= link_to project_path(project), id:"link" do %>
@@ -70,7 +70,7 @@
      <div id="videography" class="tab-pane fade">
        <% if @videography_projects.any? %>
        <div class="row">
-         <% @videography_projects.each do |project| %>
+         <% @videography_projects.sort {|a, b| b[:created_at] <=> a[:created_at]}.each do |project| %>
          <div class="col-md-4 col-sm-6 col-xs-6 card">
            <div class="image-main">
              <%= link_to project_path(project), id:"link" do %>
@@ -115,7 +115,7 @@
      </div>
    </div>
     </div>
-  </div>
+  </div><br><br>
 </div>
 <div class="container-fluid bottom-projects">
   <h2 id="bottom-headline">Like what you see? <br>Let's build something together</h2>
