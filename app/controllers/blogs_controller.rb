@@ -5,6 +5,8 @@ class BlogsController < ApplicationController
   # GET /blogs.json
   def index
     @blogs = Blog.all
+    @programmingid = BlogCategory.find_by(name: "Programming")
+    @programming = Blog.where(blog_category: @programmingid)
   end
 
   # GET /blogs/1
