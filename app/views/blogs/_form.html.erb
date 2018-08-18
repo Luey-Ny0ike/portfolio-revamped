@@ -21,12 +21,15 @@
     <%= form.file_field :blog_photo %>
   </div>
 
-
+<div class="field">
+  <%= form.label :category %>
+  <%= collection_select(:project, :blog_category_id, BlogCategory.all, :id, :name_with_state) %>
+</div>
   <div class="field">
     <%= form.label :synopsis %>
     <%= form.text_field :synopsis, id: :blog_synopsis %>
   </div>
-  
+
   <div class="field">
     <%= form.label :description %>
     <%= form.cktext_area :description, id: :blog_description %>
