@@ -45,6 +45,26 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model Blog do
+    edit do
+      field :title
+      field :blog_category
+      field :blog_photo do
+        label 'Cover Photo'
+      end
+      field :synopsis, :text do
+        html_attributes do
+          {rows: 7, cols: 50}
+        end
+      end
+      field :description, :ck_editor do
+        html_attributes do
+          {rows: 12, cols: 100}
+        end
+      end
+    end
+  end
+
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
