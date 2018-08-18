@@ -1,3 +1,154 @@
 // Place all the styles related to the blogs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.blogs {
+  background-color: #fff;
+
+  .top-part {
+    background-image: url('arto.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 7em 0;
+    text-align: center;
+    color: white;
+    font-family: 'Lora', serif;
+
+    #tbp {
+      font-family: 'Rokkitt', serif;
+    }
+  }
+
+  .panel.with-nav-tabs .panel-heading {
+    padding: 15px 5px 0 20px;
+    font-family: 'Lora', serif;
+  }
+
+  .panel.with-nav-tabs .nav-tabs {
+    border-bottom: none;
+  }
+
+  .panel.with-nav-tabs .nav-justified {
+    margin-bottom: -1px;
+  }
+  /********************************************************************/
+  /*** PANEL DEFAULT ***/
+  .with-nav-tabs.panel-default .nav-tabs > li > a,
+  .with-nav-tabs.panel-default .nav-tabs > li > a:focus,
+  .with-nav-tabs.panel-default .nav-tabs > li > a:hover {
+    color: #777;
+  }
+
+  .with-nav-tabs.panel-default .nav-tabs > .open > a,
+  .with-nav-tabs.panel-default .nav-tabs > .open > a:focus,
+  .with-nav-tabs.panel-default .nav-tabs > .open > a:hover,
+  .with-nav-tabs.panel-default .nav-tabs > li > a:focus,
+  .with-nav-tabs.panel-default .nav-tabs > li > a:hover {
+    color: #777;
+    background-color: #ddd;
+    border-color: transparent;
+  }
+
+  .with-nav-tabs.panel-default .nav-tabs > li.active > a,
+  .with-nav-tabs.panel-default .nav-tabs > li.active > a:focus,
+  .with-nav-tabs.panel-default .nav-tabs > li.active > a:hover {
+    color: #555;
+    background-color: #fff;
+    border-color: #ddd;
+    border-bottom-color: transparent;
+  }
+
+  .with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu {
+    background-color: #f5f5f5;
+    border-color: #ddd;
+  }
+
+  .with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > li > a {
+    color: #777;
+  }
+
+  .with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > li > a:focus,
+  .with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > li > a:hover {
+    background-color: #ddd;
+  }
+
+  .with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > .active > a,
+  .with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > .active > a:focus,
+  .with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > .active > a:hover {
+    color: #fff;
+    background-color: #555;
+  }
+
+  .nav-tabs {
+    margin-top: 0;
+  }
+
+  .blog-posts {
+    border: 1px solid #ddd;
+    padding: 2px;
+    background: white;
+    margin-bottom: 5px;
+    border-radius: 3%;
+    background-color: #f1f3f5;
+    .image-main {
+      padding-left: 0;
+      padding-right: 0;
+      #image-main{
+        height: 208px;
+        width: auto;
+      }
+    }
+
+    .content {
+      height: auto;
+      text-align: center;
+      font-family: 'Rokkitt', serif;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      #category-font {
+        font-family: 'Lora', serif;
+        color: #93a1af;
+      }
+    }
+  }
+}
+
+// BLOG SHOW
+.blog-show{
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  padding: 10em 0;
+  color: white;
+  text-align: center;
+  font-family: 'Lora', serif;
+  #blog-date{
+    font-family: 'Lora', serif;
+
+  }
+}
+.blog-content{
+  width: 80%;
+  margin: 0 auto;
+#synopsis{
+  padding-top: 25px;
+  font-family: 'Lora', serif;
+  line-height: 1.4em;
+  #first-letter{
+    float: left;
+    font-family: 'Rokkitt', serif;
+    font-size: 3.875em;
+    font-weight: 700;
+    line-height: 45px;
+    margin: 4px 8px -5px 0;
+  }
+}
+}
+.rest-b{
+  position: relative;
+  z-index: 4;
+  box-shadow: 0 30px 60px 20px rgba(0,0,0,.2);
+  margin-bottom: 51px;
+  background: #fff;
+}
