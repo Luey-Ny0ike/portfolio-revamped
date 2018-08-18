@@ -14,7 +14,7 @@
     </div>
     <div class="col-md-4 col-md-push-4 col-sm-4 col-sm-push-4 col-xs-12">
       <p id="project-h">- IN THE WILD</p>
-      <% if @project.link == nil%>
+      <% if @project.link == ""%>
       <button type="button" name="button" class="btn no-link-button" disabled>In development</button>
       <% else %>
       <a href="<%= @project.link%>" target="_blank" class="btn project-link-button">View it online &nbsp; <span id="anim">></span></a>
