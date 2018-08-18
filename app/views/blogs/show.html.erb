@@ -1,19 +1,36 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid blog-show" style="background: url('<%= @blog.blog_photo.url(:background)%>') no-repeat 50%">
+  <h1><%= @blog.title %></h1>
+  <% @date  = @blog.created_at%>
+  <p id="blog-date">
+    <%= @date.strftime("%B #{@date.day.ordinalize}, %Y") %>
+  </p>
+</div>
+<div class="rest-b">
+  <div class="container">
+    <div class="blog-content">
+      <% @synopsis =  @blog.synopsis %>
+      <% @first = @synopsis[0]%>
+      <% @rest = @synopsis[1..-1]%>
+      <h4 id="synopsis">
+        <span id="first-letter"><%= @first %></span>
+        <%= @rest %></h4><br>
+      <%= @blog.description.html_safe%>
 
-<p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
-</p>
+      <br><br><br><br><br><br>
 
-<p>
-  <strong>Description:</strong>
-  <%= @blog.description %>
-</p>
-
-<p>
-  <strong>Synopsis:</strong>
-  <%= @blog.synopsis %>
-</p>
-
-<%= link_to 'Edit', edit_blog_path(@blog) %> |
-<%= link_to 'Back', blogs_path %>
+      <div id="disqus_thread"></div>
+      <script>
+        (function () { // DON'T EDIT BELOW THIS LINE
+          var d = document,
+            s = d.createElement('script');
+          s.src = 'https://lewisnyoike.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', + new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the
+        <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+      </noscript>
+    </div>
+  </div>
+</div>
